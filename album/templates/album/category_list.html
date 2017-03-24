@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DJango</title>
+  </head>
+  <body>
+    <h1>ALBUM</h1>
+    <h2>Category</h2>
+    <div class="">
+      {% for c in object_list %}
+        <a href="{% url 'category-detail' c.pk %}">
+          {{ c.name }}
+        </a><br>
+      {% endfor %}
+    </div>
+  </body>
+</html>
